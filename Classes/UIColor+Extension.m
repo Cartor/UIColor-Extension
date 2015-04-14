@@ -10,6 +10,8 @@
 
 @implementation UIColor (UIColor_Extension)
 
+#pragma mark - Hex String to UIColor
+
 + (UIColor *)colorWithHexString:(NSString *)hexString
 {
     return [[self class] colorWithHexString:hexString alpha:1.0f];
@@ -38,6 +40,8 @@
     return [[self class] colorWithRGBHex:hexValue alpha:alpha];
 }
 
+#pragma mark - Hex Int to UIColor
+
 + (UIColor *)colorWithRGBHex: (uint32_t)rgbValue
 {
     return [[self class] colorWithRGBHex:rgbValue alpha:1.0f];
@@ -47,6 +51,8 @@
 {
     return [[self class] colorWith8BitRed:(float)((rgbValue & 0xFF0000) >> 16) green:(float)((rgbValue & 0xFF00) >> 8) blue:(float)(rgbValue & 0xFF) alpha:alpha];
 }
+
+#pragma mark - 8 Bit RGBA to UIColor
 
 + (UIColor *)colorWith8BitRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
 {
@@ -64,6 +70,8 @@
     
     return color;
 }
+
+#pragma mark - extra function
 
 + (NSString *)hexStringTransformFromThreeCharacters:(NSString *)hexString
 {
@@ -90,6 +98,8 @@
     
     return value;
 }
+
+#pragma mark - UIColor to Hex String or Hex Int
 
 - (NSString *)hexValueStringFromColor
 {
