@@ -8,7 +8,7 @@
 
 #import "UIColor+Extension.h"
 
-@implementation UIColor (UIColor_Extension)
+@implementation UIColor (Extension)
 
 #pragma mark - Hex String to UIColor
 
